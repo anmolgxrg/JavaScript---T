@@ -1,6 +1,6 @@
 //check a[i]+1 and a[i+1], a[i]+2 and a[i+1]+1 (consec)
 
-var arr = [1, 2, 3, 5, 8, 15];
+var arr = [1, 2, 3, 5, 8, 15,16,17,18];
 
 var totalsequences = 0;
 var SeqLength = 1;
