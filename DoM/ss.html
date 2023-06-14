@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <script>
+        function changePos() {
+            let toppos = 0;
+            let leftpos = 0;
+            while (true) {
+                toppos = Math.floor((Math.random() * 1000) + 100);
+                leftpos = Math.floor((Math.random() * 1000) + 100);
+
+                document.getElementById('img1').style.top = "" + toppos + "px";
+
+                document.getElementById('img1').style.left = "" + leftpos + "px";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <img src="5.jpg" id="img1" height="200px" width="200px" style="position: absolute; top: 100px; left: 100px;">
+        <div class="button">
+            <button onclick="changePos()">Start</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

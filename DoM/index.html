@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <title></title>
+    <style>
+#im{position:absolute; top: 200px; left: 300px;}
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <div class="two">
+            <p id="aa">How are you!</p>
+            <button onclick="document.getElementById('im').src='2.png'">change color</button>
+            <img src="1.png" height="200" width="200" id="im" />
+        </div>
+    </div>
+
+    <div id="three">
+        <p>I am fine!</p>
+    </div>
+
+    <div>
+        <hr>
+    </div>
+
+    <div><b>Hello!</b></div>
+
+    <div class="first">
+        <hr>
+    </div>
+    <div class="second">
+        <hr>
+    </div>
+
+    <div class="first">
+        <hr>
+    </div>
+    <script>
+        var pp = document.getElementsByClassName('first');
+        console.log(pp.length)
+        for (const a in pp)
+            console.log(pp[a])
+    </script>
+</body>
+
+</html>
