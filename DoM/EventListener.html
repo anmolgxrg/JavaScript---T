@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <select name="font" id="fs">
+        <option value="10">10px</option>
+        <option value="20">20px</option>
+        <option value="30">30px</option>
+        <option value="40">40px</option>
+        <option value="50">50px</option>
+    </select>
+    <p id="para" style="font-size: 5px;">Hi I am Anmol and This is Akanshal.</p>
+    <script>
+        var select = document.getElementById('fs');
+        var text = document.getElementById('para');
+        select.addEventListener('change', () => {
+            text.style.fontSize = select.value + "px";
+        });
+    </script>
+</body>
+
+</html>

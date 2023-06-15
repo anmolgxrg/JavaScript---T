@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <textarea name="area" id="one"  ></textarea> -->
+    <input type="text" id="inp"></input>
+    <button id="btn">Go</button>
+    <br>
+    <div class="holder"></div>
+
+    <script>
+        var text = document.querySelector('input');
+        var div = document.querySelector('.holder');
+        btn.addEventListener('click', () => {
+            div.innerHTML = text.value;
+        });
+    </script>
+</body>
+
+</html>

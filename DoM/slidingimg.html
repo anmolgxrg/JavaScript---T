@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script>
+        function startSliding() {
+            let leftpos = 0;
+            let img = document.getElementById('img1');
+            let interval;
+
+            if (leftpos === 0) {
+                interval = setInterval(() => {
+                    leftpos = leftpos + 100;
+                    img.style.left = leftpos + "px";
+
+                    if (leftpos >= 1300) {
+                        clearInterval(interval);
+                        interval = setInterval(() => {
+                            leftpos = leftpos - 50;
+                            img.style.left = leftpos + "px";
+
+                        }, 1000);
+                    }
+                }, 1000);
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <img src="5.jpg" id="img1" height="200px" width="200px" style="position: absolute; top: 100px; left: 100px;"><br>
+    <button onclick="startSliding()">Sliding Image</button>
+</body>
+
+</html>

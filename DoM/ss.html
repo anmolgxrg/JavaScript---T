@@ -5,24 +5,33 @@
 
     <title>Document</title>
     <script>
-        function changePos() {
-            let toppos = 0;
-            let leftpos = 0;
-            while (true) {
-                toppos = Math.floor((Math.random() * 1000) + 100);
-                leftpos = Math.floor((Math.random() * 1000) + 100);
+       function changePos() {
+    let toppos = 0;
+    let leftpos = 0;
+    let count = 0;
 
-                document.getElementById('img1').style.top = "" + toppos + "px";
+    const interval = setInterval(() => {
+        toppos = Math.floor((Math.random() * 1000) + 100);
+        leftpos = Math.floor((Math.random() * 1000) + 100);
 
-                document.getElementById('img1').style.left = "" + leftpos + "px";
-            }
+        document.getElementById('img1').style.top = "" + toppos + "px";
+        document.getElementById('img1').style.left = "" + leftpos + "px";
+
+        count++;
+
+        if (count === 100) { 
+            clearInterval(interval);
         }
+    }, 1000); 
+}
+
+
     </script>
 </head>
 
 <body>
     <div class="container">
-        <img src="5.jpg" id="img1" height="200px" width="200px" style="position: absolute; top: 100px; left: 100px;">
+        <img src="1.jpg" id="img1" height="200px" width="200px" style="position: absolute; top: 100px; left: 100px;">
         <div class="button">
             <button onclick="changePos()">Start</button>
         </div>
