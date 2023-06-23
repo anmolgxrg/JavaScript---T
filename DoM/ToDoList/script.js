@@ -1,7 +1,13 @@
 document.querySelector("#one ul").addEventListener("click", function (e) {
   if (e.target.className == "delete") var p = e.target.parentElement;
   var pp = p.parentElement;
+  console.log(p.classList);
+  p.classList.add("strike");
+  console.log(p.classList);
+  setTimeout(() => {
   pp.removeChild(p);
+  console.log(p.classList);
+  }, 500);
 });
 
 function AddEle() {
@@ -10,6 +16,7 @@ function AddEle() {
 
   f.addEventListener("click", (g) => {
     g.preventDefault();
+    f.reset();
   });
 
   var q = document.querySelector('#myform input[type="text"]');
@@ -27,3 +34,12 @@ function AddEle() {
   tbtn.innerHTML = "✔";
   tbtn.className = "delete";
 }
+
+// Preloader Misc
+addEventListener("load", function () {
+  const preloader = document.querySelector(".preloader");
+  preloader.classList.add("preloader-finish");
+  const interval = setInterval(() => {
+    preloader.remove();
+  }, 900);
+});
